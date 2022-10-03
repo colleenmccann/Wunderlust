@@ -1,0 +1,453 @@
+/* Colleen McCann */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end of CSS reset */
+
+/* variables */
+
+:root{
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* mobile styles */
+
+#skip, .sr-only{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+}
+
+h1, h2, h3{
+    font-family: Molle, sans-serif;
+}
+
+h4, p, q, small, nav, button, form{
+    font-family: Montserrat, sans-serif;
+}
+
+body{
+    background-image: linear-gradient(var(--teal), var(--white) 5%);
+    margin: 0 auto;
+    line-height: 2em;
+}
+
+h1, h2, p, h3{
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 3.5em;
+    margin-top: 1em;
+}
+
+h2, h3{
+    font-size: 2.5em;
+}
+
+header p{
+    font-size: 1.5em;
+    padding: 0 0 2em 0;
+}
+
+#intro img{
+    width: 100%;
+    margin-top: 1em;
+}
+
+#plan{
+    margin-top: 1em;
+    padding-top: 2em;
+    background-color: var(--yellow);
+    display: grid;
+    justify-items: center;
+}
+
+#plan section{
+    background-color: var(--teal);
+    padding: 1em;
+    border-radius: 10px;
+    text-align: center;
+    margin: 1em;
+    border: 2.5px solid var(--white);
+}
+
+h4{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0em 1em 1em 1em;
+}
+
+#testimonials{
+    padding-top: 2em;
+}
+
+#testimonials section{
+    display: grid;
+    justify-items: center;
+    margin: 1em;
+    text-align: center;
+}
+
+#testimonials p, q{
+    font-size: 1.5em;
+    width: 80%;
+}
+
+q{
+    font-style: italic;
+}
+
+#about{
+    background-color: var(--blue);
+    padding-top: 2em;
+}
+
+#about div{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    padding: 1em;
+}
+
+#about section{
+    text-align: center;
+    line-height: 1em;
+}
+
+#about img{
+    scale: 70%;
+}
+
+#contact{
+    padding-top: 2em;
+}
+
+form{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-required{
+    font-family: Montserrat, sans-serif;
+    font-size: 0.5em;
+    font-style: italic;
+}
+
+form label, legend{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+input[type=text]{
+    font-family: Montserrat, sans-serif;
+    width: 90%;
+    height: 4em;
+    border: 5px solid var(--purple);
+    margin-bottom: 1em;
+}
+
+fieldset{
+    display: grid;
+}
+
+.radio-input{
+        vertical-align: middle;
+}
+
+input[type=radio]{
+    width: 30%;
+    height: 6em;
+    color: var(--purple);
+    margin-bottom: 1em;
+}
+
+input[type=email]{
+    font-family: Montserrat, sans-serif;
+    width: 90%;
+    height: 4em;
+    border: 5px solid var(--purple);
+    margin-bottom: 1em;
+}
+
+input[type=tel]{
+    margin-bottom: 1em;
+    font-family: Montserrat, sans-serif;
+    width: 90%;
+    height: 4em;
+    border: 5px solid var(--purple);
+}
+
+select{
+    font-family: Montserrat, sans-serif;
+    width: 90%;
+    height: 4em;
+    border: 5px solid var(--purple);
+    font-size: 1em;
+}
+
+input[type=submit]{
+    margin: 1em 0;
+    font-family: Montserrat, sans-serif;
+    width: 90%;
+    height: 4em;
+    border: 0px;
+    background-color: var(--purple);
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+::placeholder{
+    font-size: 1.5em;
+    color: black;
+}
+
+footer{
+    padding: 2em 0;
+    font-family: Montserrat, sans-serif;
+    background-color: var(--light-gray);
+    text-align: center;
+    display: grid;
+    grid-gap: 1em;
+}
+
+footer a{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+#menu-toggle label{
+    position: absolute;
+    top: 2%;
+    right: 0%;
+    background-color: var(--yellow);
+    text-transform: uppercase;
+    padding: 0.5em 4em;
+    font-weight: bold;
+}
+
+#toggle{
+    opacity: 0;
+}
+
+#menu-toggle label, #toggle{
+    cursor: pointer;
+}
+
+#menu-toggle ul{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* tablet styles */
+
+@media screen and (min-width: 641px){
+
+    #logo img{
+        width: 35%;
+        padding: 1em;
+    }
+    #menu-toggle label{
+        left: -10000px;
+        background: none;
+    }
+
+    h1{
+        position: absolute;
+        top: 0%;
+        right: 10%;
+        text-align: right;
+    }
+
+    header p{
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        width: 60%;
+        text-align: right;
+    }
+
+    #menu-toggle ul{
+        margin: 0 auto;
+        align-content: center;
+        text-align: center;
+        padding: 2em 0 4em;
+        opacity: 1;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        justify-items: stretch;
+        grid-gap: 0.5em;
+        width: 80%;
+    }
+
+    #menu-toggle li{
+        background-color: var(--white);
+        padding: 0.5em 1em;
+    }
+
+    #menu-toggle li:hover{
+        background-color: var(--yellow);
+    }
+
+    a{
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    #img-grid{
+        margin: 0 auto;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 1em;
+    }
+
+    #img-grid picture{
+        grid-column-start: span 2;
+    }
+
+    #plan div{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #testimonials div{
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 80%;
+    }
+
+    input[type=submit]{
+        width: 30%;
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1080px){
+    #plan div{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 2em;
+    }
+
+    #plan img{
+        width: 80%;
+    }
+
+    #testimonials div{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        font-size: 0.8em;
+    }
+
+    #about div{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    form{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 0.75em;
+    }
+
+    ::placeholder{
+        font-size: 1em;
+    }
+
+    input[type=text]{
+        border: 2px solid var(--purple);
+        height: 2.5em;
+    }
+
+    input[type=email]{
+        border: 2px solid var(--purple);
+        height: 2.5em;
+    }
+
+    input[type=tel]{
+        border: 2px solid var(--purple);
+        height: 2.5em;
+    }
+
+    select{
+        border: 2px solid var(--purple);
+        height: 3em;
+    }
+
+    input[type=radio]{
+        width: auto;
+    }
+
+    fieldset{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

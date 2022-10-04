@@ -175,7 +175,7 @@ q{
 }
 
 #about img{
-    scale: 70%;
+    transform: scale(0.7);
 }
 
 #contact{
